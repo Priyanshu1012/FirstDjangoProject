@@ -1,0 +1,77 @@
+<!doctype html>
+
+<html>
+<head>
+<title>Sign in</title>
+<style type="text/css">
+       h1 {background-color:#000080;
+       color:white;}
+	   h2 {background-color:#8b0000;
+       color:white;}
+
+
+	   .col-sm-4 {width: 30%;}
+
+       .col-sm-8 {width: 70%;}
+
+
+        form{background-color:#FFFDD0;
+
+		    text-align:center;}
+</style>
+</head>
+
+<body>
+<h1><center>JEE(MAIN)2020</center></h1>
+<h2><center>Registered Canditates Sign in</center></h2>
+
+<div class="container">
+  <form action = "{% url 'submit' %}" method="post">
+    {% csrf_token %}
+    <div class="row">
+      <div class="col-sm-4">
+        <label for="fname">Application Form:</label>
+      </div>
+      <div class="col-sm-8">
+        <select name="activities">
+	       <option value="january">January JEE(MAIN)2020</option>
+		   <option value="april">April JEE(MAIN)2020</option>
+	 </select><br />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <label for="lname">Application No. :</label>
+      </div>
+      <div class="col-sm-8">
+        <input  type="text" name="Application no." size="15"  maxlength="10" />	<br />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <label for="password"> Password:</label>
+      </div>
+      <div class="col-sm-8">
+     <input type="password" name="password"/><br />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <label for="subject">Enter Security Pin :</label>
+      </div>
+      <div class="col-sm-8">
+        <input type="text" name="pin" size="15" maxlength="6"/> <br />
+      </div>
+    </div>
+	<div class="row">
+		 Security Pin:JH1V29 <br />
+    </div>
+    <div class="row">
+        <input type="submit" value="Sign in">
+    </div>
+  </form>
+</div>
+
+</body>
+
+</html>
